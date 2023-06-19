@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(112, 52, 224);
+    height: 50px;
+}
+  
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-login{
+    color: aliceblue;
+    background-color: rgb(10, 21, 83);
+    width: 80px;
+    height: 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid rgb(10, 21, 83);
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+.button-signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: rgb(112, 52, 224);
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 50px;
+    border-left: 2px solid aliceblue;
+    padding-left: 10px;
+    text-decoration: none;
+
+}
+.full-width-image {
+    width: 100vw; /* Set width to 100% of the viewport width */
+    height: 600px; /* Set a fixed height */
+  }
+  
+.icon h1 {
+    color: aliceblue;
+    letter-spacing: 2px; /* Add gap between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Apply dark border effect */
+}
+
+.container{
+    height: 600px;
+}
+.header{
+    position: relative;
+    top: -500px;
+
+}
+.header h1{
+    color: aliceblue;
+}
+.header span{
+    color: aliceblue 
+}
+.join-now{
+    display: flex;
+    position: relative;
+    top: -200px;
+    align-items: center;
+    justify-content: center;
+}
+.join-now .button-join{
+    color: aliceblue;
+    background-color: rgb(10, 21, 83);
+    width: 150px;
+    height: 32px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid rgb(10, 21, 83);
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.about{
+    padding: 40px 80px 40px 80px;
+}
+.about h1{
+    font-weight: bold;
+}
+.about p{
+    font-weight: 800;
+}
+  

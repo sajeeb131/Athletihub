@@ -13,7 +13,7 @@ const LandingPage = () => {
           <h1>ATHLETIHUB</h1>
         </div>
         
-        <div className='buttons'>
+        <div className='landing-buttons'>
           <Link to="/login" className='button-login'>Log In</Link>
           <Link to="/signup" className='button-signup'>
             <span>Create an </span>
@@ -22,7 +22,7 @@ const LandingPage = () => {
         </div>
       </nav>
 
-      <div className='container'>
+      <div className='landing-container'>
         <img src={footballPlayground} alt="" className='full-width-image' />
         <div className='header'>
           <h1>Bangladesh's Only Athlete Site</h1>

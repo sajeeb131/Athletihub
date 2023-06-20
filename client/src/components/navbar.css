@@ -1,0 +1,30 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -35%;
+    gap: 40px;
+    font-weight: 700;
+  }
+  
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+a:hover{
+    color: aqua;
+}
+@media screen and (max-width: 1020px) {
+    .buttons {
+        display: flex;
+        align-items: center;
+        position: relative;
+        left: -1%;
+      }
+}

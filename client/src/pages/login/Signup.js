@@ -71,7 +71,7 @@ const Signup = () => {
           </div>
           <div className='labels'>
             <label>Contact</label>
-            <input type="text" value={contact} onChange={(e) => setContact(e.target.value)} />
+            <input type="number" value={contact} onChange={(e) => setContact(e.target.value)} />
           </div >
           <button type="submit">Sign Up</button>
         </form>

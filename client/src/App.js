@@ -11,6 +11,7 @@ import Signup from './pages/login/Signup'
 import LandingPage from './pages/landing-page/LandingPage';
 import SubmitEvent  from './pages/home/SubmitEvent';
 import Profile from './pages/profile/Profile';
+import Logout from './pages/login/Logout'
 function App() {
   return (
     <div className="App">
@@ -19,8 +20,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route
             path="/signup"
-            element={
-              <>
+            element={<>
                 <Navbar />
                 <Signup />
               </>
@@ -58,6 +58,14 @@ function App() {
               <>
                 <Navbar />
                 <Profile />
+              </>
+            }
+          />
+          <Route
+            path="/logout"
+            element={
+              <>
+                <Logout />
               </>
             }
           />

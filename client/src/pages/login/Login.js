@@ -25,10 +25,14 @@ const Login = () => {
         const data = await response.json();
         // Handle successful login
         console.log('Logged in:', data);
-        // Store the username in local storage
+        // Store the username and _id in local storage
         localStorage.setItem('username', data.username);
+        localStorage.setItem('id', data.id);
+      
         navigate('/home');
-      } else {
+      }
+      
+       else {
         const errorData = await response.json();
         // Handle incorrect credentials or other errors
         console.log('Error:', errorData.error);
@@ -49,7 +53,7 @@ const Login = () => {
         <img src={image} alt="" className='img' />
       </div>
       <div className='form-container'>
-        <h1>Create Your Account</h1>
+        <h1>Please Sign In</h1>
         <div className='icon-container'>
           <img src={icon} alt="" width="80px" height="80px" />
         </div>

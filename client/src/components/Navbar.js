@@ -15,11 +15,12 @@ const Navbar = () => {
         
         <div className='buttons'>
           <Link to="/" className='button-home'>Home</Link>
-          <Link to="/" className='button-sports'>Sports</Link>
+          <Link to="/home" className='button-sports'>Sports</Link>
           <Link to="/" className='button-Gaming'>Gaming</Link>
           <Link to="/" className='button-Esports'>E-sports</Link>
           <Link to="/" className='button-Tournaments'>Tournaments</Link>
           <Link to="/" className='button-Marketplace'>MarketPlace</Link>
+          <Link to="/logout" className='button-Marketplace'>Logout</Link>
         </div>
       </nav>
     </div>

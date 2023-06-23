@@ -9,10 +9,11 @@ const loginUser = async(req,res) =>{
     const {email, password} = req.body
     try{
         const user = await User.login(email, password)
-
+        res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
         //creat token
         const token = createToken(user._id)
-        res.status(200).json({ username: user.username, email, token})
+
+        res.status(200).json({ username: user.username, email, token, id: user._id})
     } catch(error) {
         res.status(400).json({error: error.message})
     }

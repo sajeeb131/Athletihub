@@ -9,6 +9,7 @@ import Home from './pages/home/Home'
 import Login from './pages/login/Login'
 import Signup from './pages/login/Signup'
 import LandingPage from './pages/landing-page/LandingPage';
+import SubmitEvent  from './pages/home/SubmitEvent';
 
 function App() {
   return (
@@ -40,6 +41,14 @@ function App() {
               <>
                 <Navbar />
                 <Home />
+              </>
+            }
+          />
+          <Route
+            path="/home/post"
+            element={
+              <>
+                <SubmitEvent />
               </>
             }
           />

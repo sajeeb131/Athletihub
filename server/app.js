@@ -4,6 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const userRoutes = require('./routes/user-routes')
+const homeRoutes = require('./routes/home-routes')
 //express app
 const app = express()
 
@@ -11,6 +12,8 @@ const app = express()
 app.use(express.json())
 
 app.use('/user',userRoutes)
+
+app.use('/home',homeRoutes)
 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=> {

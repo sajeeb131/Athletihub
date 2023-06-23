@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*{
-    font-family: 'Lato', sans-serif;
-}
 .nav {
     display: flex;
     justify-content: space-between;

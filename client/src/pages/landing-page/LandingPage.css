@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: rgb(112, 52, 224);
+    background-color: #502DB4;
     height: 50px;
 }
   
@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: center;
     color: aliceblue;
-    background-color: rgb(112, 52, 224);
+    background-color: #502DB4;
     outline: none;
     border: none;
     font-size: 18px;

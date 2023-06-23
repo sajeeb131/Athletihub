@@ -10,7 +10,7 @@ import Login from './pages/login/Login'
 import Signup from './pages/login/Signup'
 import LandingPage from './pages/landing-page/LandingPage';
 import SubmitEvent  from './pages/home/SubmitEvent';
-
+import Profile from './pages/profile/Profile';
 function App() {
   return (
     <div className="App">
@@ -49,6 +49,15 @@ function App() {
             element={
               <>
                 <SubmitEvent />
+              </>
+            }
+          />
+        <Route
+            path="/profile"
+            element={
+              <>
+                <Navbar />
+                <Profile />
               </>
             }
           />

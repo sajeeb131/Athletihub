@@ -1,0 +1,106 @@
+.profile-container {
+    background-color: #B2A0E5;
+    width: 100vw;
+    height: 92.8vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-section-details-name {
+    margin-top: 0;
+    font-size: larger;
+    
+  }
+  .profile-section-details-name>h1 {
+    position: relative;
+    white-space: nowrap;
+    &:after {
+      --deco-height: 0.3125em;
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: calc(var(--deco-height) * -0.625);
+      height: var(--deco-height);
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M-17 30.5C-1 22 72-4 54 13 37.9 28.2-2.5 57.5 16 55.5s72-29 104-40' stroke='%2300FDCF' stroke-width='10'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23fff' d='M0 0h100v64H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: auto 100%;
+      background-repeat: round;
+      background-position: 0em;
+    }
+  }
+  .profile-section{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #502DB4;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    padding: 60px 40px ;
+    height: fit-content;
+    color: #fff;
+  }
+  .profile-section-image {
+    border: 2px solid transparent;
+    animation: glowingBorder 3s infinite;
+    border-radius: 12px;
+  }
+  
+  @keyframes glowingBorder {
+    0% {
+      box-shadow: 0 0 5px #00ccff;
+    }
+    50% {
+      box-shadow: 0 0 20px #ffff00;
+    }
+    100% {
+      box-shadow: 0 0 5px #00ff99;
+    }
+  }
+  
+  
+  .profile-section-image>img{
+    padding: 10px;
+  }
+  .profile-section-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .profile-section-details-bio{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 30px;
+    font-size: large;
+    font-weight: 600;
+  }
+  .profile-event-section{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #502DB4;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    padding-left: 40px ;
+    padding-right: 40px;
+    height: fit-content;
+    color: #fff;
+  }
+  .profile-event-section>h1{
+    margin-left: 18px;
+  }
+  
+  .profile-event{
+    background-color: #B2A0E5;
+    width: 600px;
+    height: 90px;
+    border-radius: 40px;
+    margin: 18px;
+    padding-bottom: 9px;
+  }
+  
+  

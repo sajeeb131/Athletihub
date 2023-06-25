@@ -10,6 +10,10 @@ const Home = () => {
   const username = localStorage.getItem('username');
 
   useEffect(() => {
+    const userId = localStorage.getItem('id'); // Assuming you're storing the user ID in localStorage
+    if(!userId){
+        navigate('/login')
+    }
     const fetchEvents = async () => {
       try {
         const response = await fetch('/home/');

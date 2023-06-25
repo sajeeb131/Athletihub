@@ -11,7 +11,7 @@ const Profile = () => {
       try {
         const userId = localStorage.getItem('id'); // Assuming you're storing the user ID in localStorage
         if(!userId){
-            navigate('/404')
+            navigate('/login')
         }
         const response = await fetch(`/profile/${userId}`);
         if (response.ok) {

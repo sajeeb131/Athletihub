@@ -20,6 +20,7 @@ const Navbar = () => {
           <Link to="/" className='button-Esports'>E-sports</Link>
           <Link to="/" className='button-Tournaments'>Tournaments</Link>
           <Link to="/" className='button-Marketplace'>MarketPlace</Link>
+          <Link to="/profile" className='button-Marketplace'>Profile</Link>
           <Link to="/logout" className='button-Marketplace'>Logout</Link>
         </div>
       </nav>

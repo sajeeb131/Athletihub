@@ -12,6 +12,10 @@ import LandingPage from './pages/landing-page/LandingPage';
 import SubmitEvent  from './pages/home/SubmitEvent';
 import Profile from './pages/profile/Profile';
 import Logout from './pages/login/Logout'
+import Market from './pages/marketplace/Market';
+import InitialNav from './components/InitialNav';
+
+
 function App() {
   return (
     <div className="App">
@@ -21,7 +25,7 @@ function App() {
           <Route
             path="/signup"
             element={<>
-                <Navbar />
+                <InitialNav />
                 <Signup />
               </>
             }
@@ -30,7 +34,7 @@ function App() {
             path="/login"
             element={
               <>
-                <Navbar />
+                <InitialNav />
                 <Login />
               </>
             }
@@ -66,6 +70,15 @@ function App() {
             element={
               <>
                 <Logout />
+              </>
+            }
+          />
+          <Route
+            path="/marketplace"
+            element={
+              <>
+                <Navbar/>
+                <Market/>
               </>
             }
           />

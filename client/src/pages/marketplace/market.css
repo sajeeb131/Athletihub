@@ -1,0 +1,210 @@
+.market-container{
+    width: 100%;
+    height: 100%;
+}
+.market-navbar-conatainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    margin-right: 140px; 
+}
+.market-navbar{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    
+}
+.market-navbar > a {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1A265A;
+    transition: font-size 0.3s ease, color 0.3s ease;
+  }
+  .market-searchbar>input{
+    text-align: left;
+    padding-left: 20px;
+  }
+  .market-searchbar>input:focus{
+    text-align: left;
+  }
+  
+  
+  
+  .market-navbar > a:hover {
+    font-size: 24px;
+    color: #6a43d4;
+  }
+  .market-searchbar{
+    display: flex;
+    align-items: center;
+  }
+  .market-searchbar>button{
+    background-color: transparent;
+    position: relative;
+    left: -50px;
+    
+  }
+  .market-searchbar button[type='submit'] svg{
+    font-size: 18px;
+    padding: 0;
+    color: black;
+    
+  }
+  .market-sale-post{
+    margin: 30px ;
+    margin-right: 160px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+  .market-sale-post>a{
+    background-color: #1A265A;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+  }
+  .market-posts {
+    display: grid;
+    margin-left: 80px;
+    grid-template-columns: repeat(4, minmax(100px, 2fr));
+    row-gap: 30px;
+  }
+  
+  
+  .market-post {
+    width: 240px;
+    height: 260px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(237, 240, 241);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .market-post:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+  }
+  
+  .market-post-details{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    row-gap: 10px;
+    padding-right: 20px;
+    padding-top: 5px;
+  }
+  .market-post-detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .market-post-button{
+    width: 60px;
+    height: 24px;
+    border-radius: 15px;
+    background-color: #1A265A;
+    color: aliceblue;
+    font-weight: 600;
+
+  }
+  .market-post-button:hover{
+    cursor: pointer;
+  }
+  .market-post-detail>span{
+    font-weight: 800;
+  }
+  .market-post-image>img{
+    border-radius: 20px;
+  }
+
+  /*css for post file */
+  .market-post-container{
+    
+    height: 100vh;
+  }
+  .market-post-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh; /* Adjust the height as needed */
+    background-color: #ffffff;
+  }
+  .market-post-form-container{
+    width: 40%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+  .market-post-form{
+    border: 5px solid #6a43d4;
+    height: 60%;
+    position: relative;
+    top: 150px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px ;
+  }
+  .market-post-form>button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #6a43d4;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+
+  }
+  .market-post-img {
+    width: 60%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .market-post-img > img {
+    width: 60%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+  .post-form-details>input{
+    border: none;
+    border-bottom: 2px solid #6a43d4;
+    border-left: 2px solid #6a43d4;
+    border-right: 2px solid #6a43d4;
+    border-radius: 0%;
+  }
+  .post-form-details{
+    display: flex;
+    align-items: flex-start;
+  }
+  .post-form-details>label{
+    font-size: 16px;
+    font-weight: 800;
+    position: relative;
+    left: -20px;
+  }
+  .post-form-details>input[type="textarea"]{
+    width: 300px;
+    height: 200px;
+
+  }
+
+  
+  
+  
+  

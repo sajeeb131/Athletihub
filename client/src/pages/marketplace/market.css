@@ -42,13 +42,10 @@
   .market-searchbar{
     display: flex;
     align-items: center;
-  }
-  .market-searchbar>button{
-    background-color: transparent;
     position: relative;
-    left: -50px;
-    
+    left: 45px;
   }
+  
   .market-searchbar button[type='submit'] svg{
     font-size: 18px;
     padding: 0;
@@ -121,6 +118,11 @@
     cursor: pointer;
   }
   .market-post-detail>span{
+    display: block;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     font-weight: 800;
   }
   .market-post-image>img{

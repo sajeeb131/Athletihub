@@ -15,6 +15,8 @@ import Logout from './pages/login/Logout'
 import Market from './pages/marketplace/Market';
 import InitialNav from './components/InitialNav';
 import MarketPost from './pages/marketplace/Post'
+import AccountType from './pages/login/AccountType';
+
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route
-            path="/signup"
+            path="/signup/:accountType"
             element={<>
                 <InitialNav />
                 <Signup />
@@ -87,6 +89,15 @@ function App() {
             element={
               <>
                 <MarketPost/>
+              </>
+            }
+          />
+          <Route
+            path="/Account-type"
+            element={
+              <>
+                <InitialNav/>
+                <AccountType/>
               </>
             }
           />

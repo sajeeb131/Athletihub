@@ -2,19 +2,22 @@ import React, { useState,  useEffect } from 'react';
 import image from '../../assets/Background/signup.png';
 import icon from '../../assets/Icon/avatar.png';
 import './signup.css';
-
+import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const Signup = () => {
+  const { accountType } = useParams();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
   const [error, setError] = useState(null);
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const user = {email, password, username, name, contact }
+    const user = {email, password, username, name, contact, accountType }
     const response = await fetch('/user/signup', {
       method:'POST',
       body: JSON.stringify(user),
@@ -36,6 +39,7 @@ const Signup = () => {
 
       setError(null)
       console.log('new user added', json)
+      navigate('/')
     }
     
 

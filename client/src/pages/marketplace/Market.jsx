@@ -4,23 +4,24 @@ import './market.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-
 const Market = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Loading state
   const [selectedType, setSelectedType] = useState('all'); // Selected type state
+  const [searchQuery, setSearchQuery] = useState(''); // Search query state
   const navigate = useNavigate();
   const username = localStorage.getItem('username');
 
   useEffect(() => {
-    const userId = localStorage.getItem('id'); 
-    if(!userId){
-        navigate('/login')
+    const userId = localStorage.getItem('id');
+    if (!userId) {
+      navigate('/login');
     }
+
     const fetchItems = async () => {
       try {
         let url = '/market/all/';
-        
+
         if (selectedType !== 'all') {
           url = `/market/${selectedType}/`; // Update URL based on selected type
         }
@@ -47,20 +48,46 @@ const Market = () => {
     setSelectedType(type);
   };
 
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    // Perform search based on search query
+    const filteredItems = items.filter((item) =>
+      item.itemName.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setItems(filteredItems);
+  };
+
   return (
     <div className="market-container">
       <div className="market-navbar-conatainer">
         <div className="market-navbar">
-          <Link to="/market" onClick={() => handleTypeClick('all')}>All</Link>
-          <Link to="/market" onClick={() => handleTypeClick('sports')}>Sports</Link>
-          <Link to="/market" onClick={() => handleTypeClick('gaming')}>Gaming Gadgets</Link>
-          <Link to="/market" onClick={() => handleTypeClick('equipment')}>Equipments</Link>
+          <Link to="/market" onClick={() => handleTypeClick('all')}>
+            All
+          </Link>
+          <Link to="/market" onClick={() => handleTypeClick('sports')}>
+            Sports
+          </Link>
+          <Link to="/market" onClick={() => handleTypeClick('gaming')}>
+            Gaming Gadgets
+          </Link>
+          <Link to="/market" onClick={() => handleTypeClick('equipment')}>
+            Equipments
+          </Link>
         </div>
         <div className="market-searchbar">
-          <input type="text" placeholder="Search" className="market-searchbar-input" />
-          <button type="submit">
-            <FaSearch />
-          </button>
+          <form onSubmit={handleSearchSubmit}>
+            <input
+              type="text"
+              placeholder="Search"
+              className="market-searchbar-input"
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+          </form>
         </div>
       </div>
 
@@ -72,7 +99,7 @@ const Market = () => {
 
       {isLoading ? (
         <div className="loading-icon">
-          <FaSpinner/>
+          <FaSpinner />
           <p>Loading...</p>
         </div>
       ) : (
@@ -80,7 +107,12 @@ const Market = () => {
           {items.map((post) => (
             <div className="market-post" key={post._id}>
               <div className="market-post-image">
-                <img src={post.image} alt={post.itemName} width="200px" height="200px" />
+                <img
+                  src={post.image}
+                  alt={post.itemName}
+                  width="200px"
+                  height="200px"
+                />
               </div>
               <div className="market-post-details">
                 <div className="market-post-detail">

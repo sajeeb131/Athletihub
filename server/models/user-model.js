@@ -25,14 +25,18 @@ const userSchema = new Schema({
     contact:{
         type: String,
         required: true
+    },
+    accountType:{
+        type: String,
+        required: true
     }
 }, { timestamps: true })
 
-userSchema.statics.signup = async function(email, password, username, name, contact) {
-    // const exists = await this.findOne({email})
-    // if(exists){
-    //     throw Error('Email already in use')
-    // }
+userSchema.statics.signup = async function(email, password, username, name, contact, accountType) {
+    const exists = await this.findOne({email})
+    if(exists){
+        throw Error('Email already in use')
+    }
 
     if(!email || !password){
         throw Error('Email is not valid')
@@ -52,7 +56,7 @@ userSchema.statics.signup = async function(email, password, username, name, cont
     const salt = await bcrypt.genSalt(10)
     const hash = await bcrypt.hash(password, salt)
 
-    const user = await this.create({email, password: hash, username, name, contact})
+    const user = await this.create({email, password: hash, username, name, contact, accountType})
     return user
 }
 

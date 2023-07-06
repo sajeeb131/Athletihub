@@ -3,12 +3,13 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+
 //routes 
 const userRoutes = require('./routes/user-routes')
 const homeRoutes = require('./routes/home-routes')
 const profileRoutes = require('./routes/profile-routes')
 const marketRoutes = require('./routes/market-route')
-
+const groundRoutes = require('./routes/grounds-routes')
 //express app
 const app = express()
 
@@ -24,6 +25,7 @@ app.use('/user',userRoutes)
 app.use('/home',homeRoutes)
 app.use('/profile',profileRoutes)
 app.use('/market',marketRoutes)
+app.use('/ground',groundRoutes)
 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=> {

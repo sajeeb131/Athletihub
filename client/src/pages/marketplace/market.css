@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     margin-left: 80px;
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 20px;
     border-bottom: 2px solid black;
     margin-right: 140px; 
@@ -23,7 +23,7 @@
     font-size: 22px;
     font-weight: 800;
     color: #1A265A;
-    transition: font-size 0.3s ease, color 0.3s ease;
+    transition:  color 0.3s ease, transform 0.3s ease-in;
   }
   .market-searchbar>input{
     text-align: left;
@@ -36,8 +36,8 @@
   
   
   .market-navbar > a:hover {
-    font-size: 24px;
-    color: #6a43d4;
+    color: #ffffff;
+    transform: scale(1.1);
   }
   .market-searchbar{
     display: flex;
@@ -103,6 +103,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
+    text-transform: capitalize;
+    text-shadow: 1px 1px #1A265A;
     
   }
   .market-post-button{

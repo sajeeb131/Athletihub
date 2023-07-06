@@ -14,7 +14,6 @@ const Navbar = () => {
         </div>
         
         <div className='buttons'>
-          <Link to="/" className='button-home'>Home</Link>
           <Link to="/home" className='button-sports'>Sports</Link>
           <Link to="/" className='button-Gaming'>Gaming</Link>
           <Link to="/" className='button-Esports'>E-sports</Link>

@@ -16,7 +16,7 @@ import Market from './pages/marketplace/Market';
 import InitialNav from './components/InitialNav';
 import MarketPost from './pages/marketplace/Post'
 import AccountType from './pages/login/AccountType';
-
+import Ground from './pages/grounds/Ground';
 
 function App() {
   return (
@@ -98,6 +98,15 @@ function App() {
               <>
                 <InitialNav/>
                 <AccountType/>
+              </>
+            }
+          />
+          <Route
+            path="/ground"
+            element={
+              <>
+                <Navbar/>
+                <Ground/>
               </>
             }
           />

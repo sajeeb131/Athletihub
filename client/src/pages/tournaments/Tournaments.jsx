@@ -1,7 +1,8 @@
 import React from 'react';
 import './Tournaments.css';
 import {TournamentList} from './helper';
-import tournamentBackground from '../../assets/Background/tournament.png'
+import tournamentBackground from '../../assets/Background/tournament.png';
+import { Link } from 'react-router-dom';
 
 function Tournaments() {
   return (
@@ -10,8 +11,8 @@ function Tournaments() {
             <img src={tournamentBackground} alt="" className='tournament-background' />
             <div className='tournament-functions'>
                 <h1>Community through Competitions</h1>
-                <button>Create an Event</button>
-                <button>Find Events</button>
+                <Link to="/tournaments/post">Create an Event </Link>
+                <Link>Find Events</Link>
             </div>
         </div>
         <div>

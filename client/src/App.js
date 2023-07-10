@@ -17,6 +17,7 @@ import InitialNav from './components/InitialNav';
 import MarketPost from './pages/marketplace/Post'
 import AccountType from './pages/login/AccountType';
 import Tournaments from './pages/tournaments/Tournaments';
+import EventPost from './pages/tournaments/EventPost';
 
 
 function App() {
@@ -108,6 +109,15 @@ function App() {
               <>
                 <Navbar/>
                 <Tournaments/>
+              </>
+            }
+          />
+          <Route
+            path="/tournaments/post"
+            element={
+              <>
+                <Navbar/>
+                <EventPost/>
               </>
             }
           />

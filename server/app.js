@@ -8,6 +8,7 @@ const userRoutes = require('./routes/user-routes')
 const homeRoutes = require('./routes/home-routes')
 const profileRoutes = require('./routes/profile-routes')
 const marketRoutes = require('./routes/market-route')
+const tournaments = require('./routes/tournaments-routes');
 
 //express app
 const app = express()
@@ -24,6 +25,7 @@ app.use('/user',userRoutes)
 app.use('/home',homeRoutes)
 app.use('/profile',profileRoutes)
 app.use('/market',marketRoutes)
+app.use('/tournaments', tournaments);
 
 mongoose.connect(process.env.MONGO_URI)
     .then(()=> {

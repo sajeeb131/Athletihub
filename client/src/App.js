@@ -17,6 +17,8 @@ import InitialNav from './components/InitialNav';
 import MarketPost from './pages/marketplace/Post'
 import AccountType from './pages/login/AccountType';
 import Ground from './pages/grounds/Ground';
+import Tournaments from './pages/tournaments/Tournaments';
+import EventPost from './pages/tournaments/EventPost';
 
 function App() {
   return (
@@ -107,6 +109,24 @@ function App() {
               <>
                 <Navbar/>
                 <Ground/>
+              </>
+            }
+          />
+          <Route
+            path="/tournaments"
+            element={
+              <>
+                <Navbar/>
+                <Tournaments/>
+              </>
+            }
+          />
+            <Route
+            path="/tournaments/post"
+            element={
+              <>
+                <Navbar/>
+                <EventPost/>
               </>
             }
           />

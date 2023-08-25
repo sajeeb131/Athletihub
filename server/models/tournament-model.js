@@ -5,7 +5,10 @@ const tournamentSchema = new mongoose.Schema({
     date: Date,
     location: String,
     prizePool: Number,
-})
+},{
+    timestamps: true,
+}
+)
 
 const Tournament = mongoose.model('Tournament', tournamentSchema);
 

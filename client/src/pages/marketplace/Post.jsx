@@ -68,11 +68,10 @@ const Post = () => {
 
   return (
     <div className="market-post-container">
-      
       <div className="market-post-form-container">
-      
         <form onSubmit={handleSubmit} className="market-post-form">
-        <h1>CREATE SALE POST</h1>
+          
+        <h1 className='headerLabel'>CREATE SALE POST</h1>
           <div className="post-form-details">
           
             <label htmlFor="seller">Seller: </label>
@@ -119,7 +118,7 @@ const Post = () => {
             />
           </div>
 
-          <button type="submit">SUBMIT</button>
+          <button className='subButton' type="submit">SUBMIT</button>
         </form>
       </div>
       <div className="market-post-img">

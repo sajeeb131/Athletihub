@@ -1,5 +1,5 @@
 
-h1{
+.headerLabel{
   display: flex;
   align-items: center;
   align-content: center;
@@ -7,7 +7,6 @@ h1{
   margin-left: 18px;
   font-size: 30px;
   text-decoration: underline;
-  
 }
 
 .market-post-container {
@@ -69,7 +68,7 @@ h1{
     height: auto;
   }
   
-  button[type="submit"] {
+  .subButton[type="submit"] {
     background-color: #4caf50;
     color: white;
     padding: 6px 20px;

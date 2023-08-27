@@ -1,0 +1,80 @@
+
+h1{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin-top: 70px;
+  margin-left: 18px;
+  font-size: 30px;
+  text-decoration: underline;
+  
+}
+
+.market-post-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: rgb(200, 234, 235);
+    padding: 20px;
+  }
+  
+  .market-post-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    align-items: flex-start;
+    padding: 20px;
+    background-color: rgb(200, 234, 235);
+   
+
+  }
+  
+  .market-post-form {
+    width: 100%;
+    max-width: 460px;
+  }
+  
+  .post-form-details {
+    margin-bottom: 2px;
+  }
+  
+  .post-form-details label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .post-form-details input,
+  .post-form-details textarea,
+  .post-form-details select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .post-form-details select {
+    height: 34px;
+  }
+  
+  .market-post-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .market-post-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

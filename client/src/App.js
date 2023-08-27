@@ -19,6 +19,8 @@ import AccountType from './pages/login/AccountType';
 import Ground from './pages/grounds/Ground';
 import Tournaments from './pages/tournaments/Tournaments';
 import EventPost from './pages/tournaments/EventPost';
+import ESports from './pages/eSports/eSports';
+
 
 function App() {
   return (
@@ -127,6 +129,15 @@ function App() {
               <>
                 <Navbar/>
                 <EventPost/>
+              </>
+            }
+          />
+          <Route
+            path="/eSports"
+            element={
+              <>
+                <Navbar/>
+                <ESports/>
               </>
             }
           />

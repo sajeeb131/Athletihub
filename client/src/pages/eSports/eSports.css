@@ -13,7 +13,7 @@
   align-items: flex-start;
   margin-bottom: 20px;
   background-color: #007bff;
-  padding: 60px;
+  padding: 70px;
 }
 
 .search-bars {
@@ -44,6 +44,7 @@
   padding: 60px;
   align-items: center; 
   transition: background-color 0.2s ease-in-out;
+  margin-top: -12px;
 }
 
 .esportsbuttons .btn {

@@ -5,11 +5,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
+  const [type, setType] = useState(null)
   const navigate = useNavigate()
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const userId = localStorage.getItem('id'); // Assuming you're storing the user ID in localStorage
+        const newtype = localStorage.getItem('type')
+        setType(newtype)
         if(!userId){
             navigate('/login')
         }
@@ -47,9 +50,14 @@ const Profile = () => {
                 <span className="username">@{profile.username}</span>
                 <span className="email">{profile.email}</span>
                 <span className="phone">{profile.contact}</span>
+
               </>
             )}
           </div>
+          
+          {type === 'Promoter' && (
+            <button className='promoter-button' onClick={() => navigate('/ground-post')}>Create new Ground</button>
+          )}
         </div>
       </div>
 

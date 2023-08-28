@@ -113,3 +113,62 @@
 
 }
 
+.groundProfile-container{
+    display: flex;
+    flex-direction: row;
+}
+.groundProfile-info{
+    width: 62%;
+    margin: 40px;
+}
+.info-section1{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.section1{
+    margin: 40px;
+}
+.section1-titlebox{
+    background-color: #1A265A;
+    color: #E4F3EE;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+}
+.section1-box{
+    background-color: #B2A0E5;
+    width: 240px;
+    height: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 800;
+    row-gap: 20px;
+}
+.groundprofile-li{
+    padding-bottom: 20px;
+    color: aliceblue;
+    text-shadow: 2px 2px #030000;
+}
+.section1-box-notice{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+.groundProfile-name{
+    font-size: 50px;
+    font-weight: 800;
+    text-shadow: 2px 2px #030000;
+    color: rgb(20, 107, 158);
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid ;
+    border-radius: 20px;
+}

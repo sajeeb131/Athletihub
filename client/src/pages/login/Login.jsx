@@ -28,6 +28,7 @@ const Login = () => {
         // Store the username and _id in local storage
         localStorage.setItem('username', data.username);
         localStorage.setItem('id', data.id);
+        localStorage.setItem('type', data.accountType);
       
         navigate('/home');
       }

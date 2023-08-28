@@ -89,5 +89,20 @@ const newSponsoredGround = async(req, res) =>{
         res.status(400).json({error: error.message})
     }
 } 
+const getTimeSlotsForGround = async (req, res) => {
+  const { id } = req.params;
 
-module.exports = {getGrounds, getSponsoredGrounds, createGround, newSponsoredGround,updateGroundTimeSlots}
+  try {
+    const ground = await Grounds.findById(id);
+    if (!ground) {
+      return res.status(404).json({ error: 'Ground not found.' });
+    }
+
+    const timeSlots = ground.gameHour; // Assuming the time slots are stored in the gameHour field
+    res.status(200).json(timeSlots);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+module.exports = {getGrounds, getTimeSlotsForGround, getSponsoredGrounds, createGround, newSponsoredGround,updateGroundTimeSlots}

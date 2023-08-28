@@ -18,10 +18,12 @@ import InitialNav from './components/InitialNav';
 import MarketPost from './pages/marketplace/Post'
 import AccountType from './pages/login/AccountType';
 import Ground from './pages/grounds/Ground';
+import GroundPost from './pages/ground-post/PostBasic'
+import GroundPostTime from './pages/ground-post/PostTime'
 import Tournaments from './pages/tournaments/Tournaments';
 import EventPost from './pages/tournaments/EventPost';
 import ESports from './pages/eSports/eSports';
-
+import GroundProfile from './pages/grounds/groundProfile'
 
 function App() {
   return (
@@ -112,6 +114,33 @@ function App() {
               <>
                 <Navbar/>
                 <Ground/>
+              </>
+            }
+          />
+          <Route
+            path="/ground-post"
+            element={
+              <>
+                <Navbar/>
+                <GroundPost/>
+              </>
+            }
+          />
+          <Route
+            path="/ground-post-time/:id"
+            element={
+              <>
+                <Navbar/>
+                <GroundPostTime/>
+              </>
+            }
+          />
+          <Route
+            path="/groundProfile/:id"
+            element={
+              <>
+                <Navbar/>
+                <GroundProfile/>
               </>
             }
           />

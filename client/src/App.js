@@ -23,6 +23,8 @@ import GroundPostTime from './pages/ground-post/PostTime'
 import Tournaments from './pages/tournaments/Tournaments';
 import EventPost from './pages/tournaments/EventPost';
 import ESports from './pages/eSports/eSports';
+import CreateCommunity from './pages/eSports/CreateCommunity';
+import CreateTeam from './pages/eSports/CreateTeam';
 import GroundProfile from './pages/grounds/groundProfile'
 
 function App() {
@@ -168,6 +170,24 @@ function App() {
               <>
                 <Navbar/>
                 <ESports/>
+              </>
+            }
+          />
+          <Route
+            path="/CreateCommunity"
+            element={
+              <>
+                <Navbar/>
+                <CreateCommunity/>
+              </>
+            }
+          />
+          <Route
+            path="/CreateTeam"
+            element={
+              <>
+                <Navbar/>
+                <CreateTeam/>
               </>
             }
           />

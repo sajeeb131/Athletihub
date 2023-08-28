@@ -4,6 +4,9 @@ const CreateTeam = ({ onSubmit }) => {
   const [teamName, setTeamName] = useState('');
   const [sport, setSport] = useState('');
   const [description, setDescription] = useState('');
+  const [membersRequired, setMembersRequired] = useState(0);
+  const [rankRequired, setRankRequired] = useState('');
+  const [mail, setMail] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -11,11 +14,17 @@ const CreateTeam = ({ onSubmit }) => {
       name: teamName,
       sport: sport,
       description: description,
+      membersRequired: membersRequired,
+      rankRequired: rankRequired,
+      mail: mail,
     };
     onSubmit(newTeam);
     setTeamName('');
     setSport('');
     setDescription('');
+    setMembersRequired(0);
+    setRankRequired('');
+    setMail('');
   };
 
   return (
@@ -52,7 +61,37 @@ const CreateTeam = ({ onSubmit }) => {
           />
         </div>
         <div>
-          <button type="submit">Create Team</button>
+          <label htmlFor="membersRequired">Members Required:</label>
+          <input
+            type="number"
+            id="membersRequired"
+            value={membersRequired}
+            onChange={(e) => setMembersRequired(parseInt(e.target.value))}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="rankRequired">Rank Required:</label>
+          <input
+            type="text"
+            id="rankRequired"
+            value={rankRequired}
+            onChange={(e) => setRankRequired(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="mail">Mail:</label>
+          <input
+            type="email"
+            id="mail"
+            value={mail}
+            onChange={(e) => setMail(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <button type="submit">Create Team Request Post</button>
         </div>
       </form>
     </div>

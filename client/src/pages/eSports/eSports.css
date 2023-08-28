@@ -1,7 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+
 
 .sports-community-page {
   text-align: center;
@@ -46,7 +43,7 @@
   gap: 10px;
   padding: 60px;
   align-items: center; 
-  
+  transition: background-color 0.2s ease-in-out;
 }
 
 .esportsbuttons .btn {
@@ -56,17 +53,12 @@
   padding: 10px 20px;
   cursor: pointer;
   width: 200px;
+  transition: background-color 0.2s ease-in-out;
+  
 }
 
-.btnNotify{
-  padding: 6px;
-  border: #0056b3;
-  border-radius: 5px;
-  box-shadow: rgb(90, 90, 187) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;  border: 1px solid rgb(26, 124, 204);
-  background-color: aliceblue;
-}
-.buttons button:hover {
-  background-color: #0056b3;
+.esportsbuttons .btn:hover {
+  background-color: #19da90;
 }
 
 .team-requirements {
@@ -74,4 +66,154 @@
   padding: 20px;
   margin: 0 auto;
   max-width: 400px;
+}
+
+/* ... (other styles) */
+
+.communities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.popularComs {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.popularComs img {
+  max-width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.popularComs h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.popularComs p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.Communi-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  position: relative; 
+  bottom: 20px; 
+  left: 0; 
+  transition: background-color 0.2s ease-in-out;
+}
+
+.Communi-btn:hover {
+  background-color: #19da90;
+}
+
+
+.team-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  margin-top: 20px;
+}
+
+.team-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #034388;
+  font-size: 30px;
+}
+.team-container .team-box p {
+  font-size: 18px;
+  color: #422299;
+  
+}
+
+.team-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.team-box p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.mail-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.mail-button:hover {
+  background-color: #0056b3;
+}
+
+/* SearchedCommunity.css */
+
+.searched-community-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searched-community-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.searched-community-details p {
+  margin: 5px 0;
+}
+
+.join-button {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-button:hover {
+  background-color: #0056b3;
 }

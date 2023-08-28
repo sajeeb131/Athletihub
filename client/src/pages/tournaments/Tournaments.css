@@ -110,3 +110,49 @@
     height: 40px;
     position: 
 } */
+.recent-container{
+    padding: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.recent-container h1{
+    display: inline-block;
+    color: rgb(58, 28, 97);
+}
+.recent-tournaments{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 2fr));
+    row-gap: 50px;
+    column-gap: 100px;
+}
+.single-box{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    background-color: #E4F3EE;
+    width: 750px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 180px;
+}
+.single-box h2{
+    margin: 0;
+}
+.single-box h3{
+    margin: 8px;
+}
+.single-box button{
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    height: 30px;
+    background-color: #002D40;
+    transition: 0.2 all;
+    
+}

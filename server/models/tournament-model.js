@@ -2,9 +2,10 @@ const mongoose = require('mongoose');
 
 const tournamentSchema = new mongoose.Schema({
     name: String,
+    game: String,
     date: Date,
     location: String,
-    prizePool: Number,
+    prizePool: String,
 },{
     timestamps: true,
 }

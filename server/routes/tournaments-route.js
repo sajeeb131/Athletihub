@@ -4,7 +4,7 @@ const { createTournament, getTournament, getTournamentDetails} = require('../con
 const Router = express.Router();
 
 Router.post('/create', createTournament);
-Router.get('/all', getTournament);
+Router.get('/', getTournament);
 Router.get('/:id', getTournamentDetails);
 
 module.exports = Router;

@@ -1,9 +1,9 @@
-const Tournament = require('../models/tournament-model');
+const Tournaments = require('../models/tournament-model');
 const asyncHandler = require("express-async-handler");
 
 const createTournament = asyncHandler( async (req, res)=>{
-    const {name, date, location, prizePool} = req.body;
-    if(!name || !date || !location || !prizePool){
+    const {name, game, date, location, prizePool} = req.body;
+    if(!name || !game || !date || !location || !prizePool){
         res.status(400);
         throw new Error("Please fill in all fields");
     }
@@ -12,6 +12,7 @@ const createTournament = asyncHandler( async (req, res)=>{
     try{
     const tournament = await Tournament.create({
         name,
+        game,
         date,
         location,
         prizePool
@@ -22,14 +23,14 @@ const createTournament = asyncHandler( async (req, res)=>{
     }
 });
 
-const getTournament = asyncHandler( async (req, res)=>{
+const getTournament =  async (req, res) => {
     try{
-        const tournaments = await Tournament.find({}).sort({createdAt: -1}).exec();
+        const tournaments = await Tournaments.find({}).sort({createdAt: -1});
         res.status(200).json(tournaments);
     }catch(error){
         res.status(400).json({error: error.message});
     }
-});
+};
 
 const getTournamentDetails = asyncHandler (async (req, res)=> {
     try{

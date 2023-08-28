@@ -43,6 +43,12 @@ form input {
     border-bottom: 1px solid #121619;
     color: #1A265A
 }
+#name{
+  width: 500px;
+}
+#game{
+  width: 500px;
+}
 form textarea {
     margin-top: 15px;
     height: 70px;

@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Tournaments.css';
 import {TournamentList} from './helper';
 import tournamentBackground from '../../assets/Background/tournament.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-function Tournaments() {
+const Tournaments = () => {
+    const [tournaments, setTournaments] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() =>{
+        fetch('/tournaments/')
+        .then(response => response.json())
+        .then(data => setTournaments(data))
+        .catch(error => console.error('Error fetching data: ', error))
+    }, []);
+
+
   return (
     <div className='tournament-container'>
         <div className='tournament-header'>
@@ -36,6 +47,21 @@ function Tournaments() {
                 </div>
             </div>
         </div>
+
+        <div className='recent-container'>
+            <h1>Recent Tournaments</h1>
+            <div className='recent-tournaments'>
+                    {tournaments.map((tournament) => (
+                        <div className='single-box' key={tournament._id}>
+                            <h2>{tournament.name}</h2>
+                            <h3>{tournament.game}</h3>
+                            <h3>{tournament.location}</h3>
+                            <h3>{tournament.date}</h3>
+                        </div>
+                    ))}
+            </div>
+        </div>
+
     </div>
   )
 }

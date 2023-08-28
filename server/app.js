@@ -11,6 +11,8 @@ const profileRoutes = require('./routes/profile-routes')
 const marketRoutes = require('./routes/market-route')
 const groundRoutes = require('./routes/grounds-routes')
 
+const tournaments = require('./routes/tournaments-route')
+// const esports = require('./routes/esports-route')
 //express app
 const app = express()
 
@@ -27,6 +29,8 @@ app.use('/home',homeRoutes)
 app.use('/profile',profileRoutes)
 app.use('/market',marketRoutes)
 app.use('/ground',groundRoutes)
+app.use('/tournaments', tournaments)
+// app.use('/esports', esports)
 
 
 //mongoDB connection

@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.sports-community-page {
+  text-align: center;
+  padding: 20px;
+}
+
+
+.search-container {
+  background-image: url('../../assets/eSports-bg.jpg');
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  padding: 60px;
+}
+
+.search-bars {
+  flex: 1;
+  margin-left: 350px;
+  margin-right: 350px;
+  opacity: 0.9;
+}
+.mainTitle{
+  color: aliceblue;
+  font-size: 45px; 
+  margin-bottom: 45px;
+  opacity: 1;
+}
+
+.search-bars input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #4f4da5;
+  border-radius: 8px;
+  
+}
+
+.esportsbuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 60px;
+  align-items: center; 
+  
+}
+
+.esportsbuttons .btn {
+  background-color: #0652a3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.btnNotify{
+  padding: 6px;
+  border: #0056b3;
+  border-radius: 5px;
+  box-shadow: rgb(90, 90, 187) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;  border: 1px solid rgb(26, 124, 204);
+  background-color: aliceblue;
+}
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+.team-requirements {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+}

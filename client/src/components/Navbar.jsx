@@ -15,9 +15,9 @@ const Navbar = () => {
         
         <div className='buttons'>
           <Link to="/home" className='button-sports'>Sports</Link>
-          <Link to="/" className='button-Gaming'>Gaming</Link>
-          <Link to="/" className='button-Esports'>E-sports</Link>
-          <Link to="/" className='button-Tournaments'>Tournaments</Link>
+          <Link to="/eSports" className='button-Gaming'>Gaming</Link>
+          <Link to="/eSports" className='button-Esports'>E-sports</Link>
+          <Link to="/tournaments" className='button-Tournaments'>Tournaments</Link>
           <Link to="/market" className='button-Marketplace'>MarketPlace</Link>
           <Link to="/profile" className='button-Marketplace'>Profile</Link>
           <Link to="/logout" className='button-Marketplace'>Logout</Link>

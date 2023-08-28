@@ -1,0 +1,74 @@
+.ground-post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: #007bff;
+    border-radius: 50px;
+    box-shadow: 0px 20px 20px 0px #000000;
+    padding-left: 40px;
+  }
+  .ground-post-time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: #007bff;
+    border-radius: 50px;
+    box-shadow: 0px 20px 20px 0px #000000;
+    padding-left: 0px;
+  }
+  
+  .post-form {
+    margin-left: 70px;
+    width: 400px; /* Set the desired width for the form */
+  }
+  
+  .ground-post-basic {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .ground-post-basic label {
+    font-weight: bold;
+    color: #fff;
+    width: 150px;
+  }
+  
+  .ground-post-basic input,
+  .ground-post-basic textarea {
+    
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .ground-next-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+  
+  .ground-next-button button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    background-color: #a408ff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  
+  /* You can further customize the styles based on your design requirements */
+  

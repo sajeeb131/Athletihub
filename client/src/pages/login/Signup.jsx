@@ -39,7 +39,13 @@ const Signup = () => {
 
       setError(null)
       console.log('new user added', json)
-      navigate('/')
+      if(accountType =="Promoter"){
+        navigate('/ground-post')
+      }
+      else{
+        navigate('/')
+      }
+      
     }
     
 

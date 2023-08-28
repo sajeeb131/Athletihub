@@ -8,10 +8,16 @@ const userSchema = new Schema({
     },
     groundName:{
         type:String, 
+        required: true,
+        unique: true
+    },
+    location:{
+        type: String,
         required: true
     },
     image:{
-        type: String
+        type: String,
+        required: false
     },
     contact:{
         type: String,
@@ -23,8 +29,7 @@ const userSchema = new Schema({
     },
     gameHour:{
         type: Array,
-        default: [],
-        required: true
+        default: []
     },
     offers:{
         type: Array,

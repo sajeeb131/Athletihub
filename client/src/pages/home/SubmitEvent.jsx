@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './home.css';
 import DatePicker from 'react-datepicker'
-import 'react-datepicker/dist/react-datepicker.css'
 import { useNavigate} from 'react-router-dom'
 
 const EventForm = () => {

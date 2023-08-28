@@ -1,9 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import image1 from '../../assets/Background/4.png'
 import './ground.css'
 import { FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 const Ground = () => {
-  
+    const [grounds, setGrounds] = useState("")
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const fetchData = async () => {
+          const userId = localStorage.getItem('id');
+          if (!userId) {
+            navigate('/login');
+          }
+          try {
+            let url = 'ground/all';
+            const response = await fetch(url);
+            if (response.ok) {
+              const data = await response.json();
+              setGrounds(data);
+            } else {
+              console.log("Error: ", response.statusText);
+            }
+          } catch (error) {
+            console.log("Error: ", error.message);
+          }
+        };
+      
+        fetchData();
+      }, []);
+      
     const onClickSponsoredTurf = ()=>{
 
     }
@@ -54,12 +80,19 @@ const Ground = () => {
                     
                 </div>
 
+                {Array.isArray(grounds) ? (
+                    grounds.map((ground) => (
+                        <div className="grounds-individual" key={ground._id}>
+                        <span>{ground.groundName}</span>
+                        <span>Location: {ground.contact}</span>
+                        <button>Details</button>
+                        </div>
+                    ))
+                ) : (
+                <p>No grounds available.</p>
+                )}
 
-                <div className='grounds-individual'>
-                    <span>Motijheel Arambag Academy</span>
-                    <span>Location: Motijheel</span>
-                    <button >Detail</button>
-                </div>
+                
             </div>
         </div>
     )

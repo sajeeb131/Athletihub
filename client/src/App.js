@@ -1,6 +1,7 @@
 
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import "react-datepicker/dist/react-datepicker.css";
 
 
 //pages and components
@@ -17,6 +18,9 @@ import InitialNav from './components/InitialNav';
 import MarketPost from './pages/marketplace/Post'
 import AccountType from './pages/login/AccountType';
 import Ground from './pages/grounds/Ground';
+import PostTime from './pages/ground-post/PostTime';
+import PostBasic from './pages/ground-post/PostBasic';
+
 
 function App() {
   return (
@@ -107,6 +111,24 @@ function App() {
               <>
                 <Navbar/>
                 <Ground/>
+              </>
+            }
+          />
+          <Route
+            path="/ground-post"
+            element={
+              <>
+                
+                <PostBasic/>
+              </>
+            }
+          />
+          <Route
+            path="/ground-post-time/:groundId"
+            element={
+              <>
+                
+                <PostTime/>
               </>
             }
           />

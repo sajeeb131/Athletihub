@@ -10,6 +10,7 @@ const homeRoutes = require('./routes/home-routes')
 const profileRoutes = require('./routes/profile-routes')
 const marketRoutes = require('./routes/market-route')
 const groundRoutes = require('./routes/grounds-routes')
+
 //express app
 const app = express()
 
@@ -27,6 +28,8 @@ app.use('/profile',profileRoutes)
 app.use('/market',marketRoutes)
 app.use('/ground',groundRoutes)
 
+
+//mongoDB connection
 mongoose.connect(process.env.MONGO_URI)
     .then(()=> {
         //listen for requests

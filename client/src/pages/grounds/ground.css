@@ -2,7 +2,7 @@
     margin-top: 0;
     background-color: #E4F3EE;
     width: 100%;
-    height: 100%;
+    height: fit-content;
     position: absolute;
     
 }
@@ -89,6 +89,7 @@
     background-color: #fff;
     border-radius: 20px;
     padding-left: 40px;
+    margin-bottom: 20px;
     
 }
 .grounds-individual>span{
@@ -112,4 +113,3 @@
 
 }
 
-  

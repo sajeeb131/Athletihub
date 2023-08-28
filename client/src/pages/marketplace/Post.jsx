@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './market.css';
-import image from '../../assets/sale.jpg';
+import './post.css';
+import image from '../../assets/sale.png';
 import { useNavigate } from 'react-router-dom';
 const Post = () => {
   const [formData, setFormData] = useState({
@@ -70,7 +70,10 @@ const Post = () => {
     <div className="market-post-container">
       <div className="market-post-form-container">
         <form onSubmit={handleSubmit} className="market-post-form">
+          
+        <h1 className='headerLabel'>CREATE SALE POST</h1>
           <div className="post-form-details">
+          
             <label htmlFor="seller">Seller: </label>
             <input type="text" id="seller" name="seller" value={formData.seller} onChange={handleInputChange} />
           </div>
@@ -115,7 +118,7 @@ const Post = () => {
             />
           </div>
 
-          <button type="submit">SUBMIT</button>
+          <button className='subButton' type="submit">SUBMIT</button>
         </form>
       </div>
       <div className="market-post-img">
